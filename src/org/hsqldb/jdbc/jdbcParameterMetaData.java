@@ -382,6 +382,16 @@ public class jdbcParameterMetaData implements ParameterMetaData {
         return sb.toString();
     }
 
+    @Override
+    public <T> T unwrap(Class<T> aClass) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean isWrapperFor(Class<?> aClass) throws SQLException {
+        return false;
+    }
+
 //#ifdef JAVA6
 /*
     public <T> T unwrap(Class<T> iface) throws SQLException

@@ -461,6 +461,16 @@ public class jdbcBlob implements Blob {
         data = newData;
     }
 
+    @Override
+    public void free() throws SQLException {
+
+    }
+
+    @Override
+    public InputStream getBinaryStream(long l, long l1) throws SQLException {
+        return null;
+    }
+
 //#ifdef JAVA6
 /*
     public void free() throws SQLException

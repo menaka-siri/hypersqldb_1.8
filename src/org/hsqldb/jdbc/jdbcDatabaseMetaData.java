@@ -31,10 +31,7 @@
 
 package org.hsqldb.jdbc;
 
-import java.sql.Connection;
-import java.sql.DatabaseMetaData;
-import java.sql.ResultSet;
-import java.sql.SQLException;
+import java.sql.*;
 
 //#ifdef JAVA6
 /*
@@ -5408,6 +5405,51 @@ public class jdbcDatabaseMetaData implements DatabaseMetaData {
         return false;
     }
 
+    @Override
+    public RowIdLifetime getRowIdLifetime() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public ResultSet getSchemas(String s, String s1) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean supportsStoredFunctionsUsingCallSyntax() throws SQLException {
+        return false;
+    }
+
+    @Override
+    public boolean autoCommitFailureClosesAllResultSets() throws SQLException {
+        return false;
+    }
+
+    @Override
+    public ResultSet getClientInfoProperties() throws SQLException {
+        return null;
+    }
+
+    @Override
+    public ResultSet getFunctions(String s, String s1, String s2) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public ResultSet getFunctionColumns(String s, String s1, String s2, String s3) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public ResultSet getPseudoColumns(String s, String s1, String s2, String s3) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean generatedKeyAlwaysReturned() throws SQLException {
+        return false;
+    }
+
 //#endif JAVA4
     //----------------------- Internal Implementation --------------------------
 
@@ -5647,6 +5689,16 @@ public class jdbcDatabaseMetaData implements DatabaseMetaData {
         }
 
         return schemaName;
+    }
+
+    @Override
+    public <T> T unwrap(Class<T> aClass) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean isWrapperFor(Class<?> aClass) throws SQLException {
+        return false;
     }
 
 //#ifdef JAVA6

@@ -36,7 +36,7 @@ import java.io.InputStream;
 import java.io.Reader;
 import java.io.Serializable;
 import java.math.BigDecimal;
-import java.sql.Date;
+import java.sql.*;
 
 //#ifdef JAVA6
 /*
@@ -46,23 +46,12 @@ import java.sql.SQLXML;
 */
 
 //#endif JAVA6
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
-import java.sql.SQLException;
-import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.Calendar;
 
 //#ifdef JAVA2
-import java.sql.Array;
-import java.sql.Blob;
-import java.sql.Clob;
-import java.sql.Ref;
 
 //#endif JAVA2
 //#ifdef JAVA4
-import java.sql.ParameterMetaData;
 
 //#endif JAVA4
 import org.hsqldb.Column;
@@ -1110,6 +1099,56 @@ implements PreparedStatement {
         setObject(parameterIndex, x);
     }
 
+    @Override
+    public void setAsciiStream(int i, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setBinaryStream(int i, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setCharacterStream(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setAsciiStream(int i, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void setBinaryStream(int i, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void setCharacterStream(int i, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void setNCharacterStream(int i, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void setClob(int i, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void setBlob(int i, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void setNClob(int i, Reader reader) throws SQLException {
+
+    }
+
     /**
      * <!-- start generic documentation -->
      * Sets the value of the designated parameter with the given object.
@@ -1800,6 +1839,46 @@ implements PreparedStatement {
 
         // NOTE:  pmd is declared as Object to avoid yet another #ifdef.
         return (ParameterMetaData) pmd;
+    }
+
+    @Override
+    public void setRowId(int i, RowId rowId) throws SQLException {
+
+    }
+
+    @Override
+    public void setNString(int i, String s) throws SQLException {
+
+    }
+
+    @Override
+    public void setNCharacterStream(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setNClob(int i, NClob nClob) throws SQLException {
+
+    }
+
+    @Override
+    public void setClob(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setBlob(int i, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setNClob(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setSQLXML(int i, SQLXML sqlxml) throws SQLException {
+
     }
 
 //#endif JAVA4

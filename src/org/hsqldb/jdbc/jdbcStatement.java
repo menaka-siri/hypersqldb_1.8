@@ -1544,6 +1544,26 @@ public class jdbcStatement implements Statement {
         return isClosed;
     }
 
+    @Override
+    public void setPoolable(boolean b) throws SQLException {
+
+    }
+
+    @Override
+    public boolean isPoolable() throws SQLException {
+        return false;
+    }
+
+    @Override
+    public void closeOnCompletion() throws SQLException {
+
+    }
+
+    @Override
+    public boolean isCloseOnCompletion() throws SQLException {
+        return false;
+    }
+
     /**
      * An internal check for closed statements.
      *
@@ -1586,6 +1606,16 @@ public class jdbcStatement implements Statement {
         } catch (HsqlException e) {
             throw Util.sqlException(e);
         }
+    }
+
+    @Override
+    public <T> T unwrap(Class<T> aClass) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean isWrapperFor(Class<?> aClass) throws SQLException {
+        return false;
     }
 //#ifdef JAVA6
 /*

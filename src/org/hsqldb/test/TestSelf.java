@@ -76,6 +76,7 @@ import java.sql.Statement;
 import java.sql.Types;
 
 import org.hsqldb.jdbc.jdbcDataSource;
+import org.hsqldb.lib.ObjectComparator;
 import org.hsqldb.lib.Sort;
 import org.hsqldb.lib.StringComparator;
 
@@ -235,8 +236,15 @@ class TestSelf extends TestUtil {
 
             filelist = new File(new File(absolute).getParent()).list();
 
-            Sort.sort((Object[]) filelist, new StringComparator(), 0,
-                      filelist.length - 1);
+//            Sort.sort((Object[]) filelist, new StringComparator(), 0,filelist.length - 1); //commented by menaka-siri
+
+            Sort.sort((Object[]) filelist, new ObjectComparator() {
+                        @Override
+                        public int compare(Object var1, Object var2) {
+                            return var1 == var2?0:(var1 == null?-1:(var2 == null?1:((String)var1).compareTo((String)var2)));
+                        }
+                    }, 0,
+                    filelist.length - 1);
 
             for (int i = 0; i < filelist.length; i++) {
                 String fname = filelist[i];

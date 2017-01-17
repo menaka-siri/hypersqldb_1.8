@@ -463,6 +463,16 @@ public final class jdbcClob implements Clob {
         }
     }
 
+    @Override
+    public void free() throws SQLException {
+
+    }
+
+    @Override
+    public Reader getCharacterStream(long l, long l1) throws SQLException {
+        return null;
+    }
+
 //#ifdef JAVA6
 /*
     public void free() throws SQLException

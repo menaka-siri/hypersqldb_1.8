@@ -35,7 +35,9 @@ import java.io.PrintWriter;
 import java.io.Serializable;
 import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.SQLFeatureNotSupportedException;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 //#ifdef JAVA4
 import javax.naming.NamingException;
@@ -196,6 +198,11 @@ public class jdbcDataSource implements Serializable {
         return 0;
     }
 
+    @Override
+    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+        return null;
+    }
+
     /**
      * <p>Retrieves the log writer for this <code>DataSource</code>
      * object.
@@ -309,6 +316,16 @@ public class jdbcDataSource implements Serializable {
      */
     public void setUser(String user) {
         this.user = user;
+    }
+
+    @Override
+    public <T> T unwrap(Class<T> aClass) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean isWrapperFor(Class<?> aClass) throws SQLException {
+        return false;
     }
 
 //#ifdef JAVA6

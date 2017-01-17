@@ -71,9 +71,7 @@ import java.io.InputStream;
 import java.io.Reader;
 import java.io.StringReader;
 import java.math.BigDecimal;
-import java.sql.Date;
-import java.sql.ResultSet;
-import java.sql.ResultSetMetaData;
+import java.sql.*;
 
 //#ifdef JAVA6
 /*
@@ -83,18 +81,9 @@ import java.sql.SQLXML;
 */
 
 //#endif JAVA6
-import java.sql.SQLException;
-import java.sql.SQLWarning;
-import java.sql.Statement;
-import java.sql.Time;
-import java.sql.Timestamp;
 import java.util.Calendar;
 
 //#ifdef JAVA2
-import java.sql.Array;
-import java.sql.Blob;
-import java.sql.Clob;
-import java.sql.Ref;
 import java.util.Map;
 
 //#endif JAVA2
@@ -4845,6 +4834,256 @@ public class jdbcResultSet implements ResultSet {
         throw Util.notSupported();
     }
 
+    @Override
+    public RowId getRowId(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public RowId getRowId(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void updateRowId(int i, RowId rowId) throws SQLException {
+
+    }
+
+    @Override
+    public void updateRowId(String s, RowId rowId) throws SQLException {
+
+    }
+
+    @Override
+    public int getHoldability() throws SQLException {
+        return 0;
+    }
+
+    @Override
+    public boolean isClosed() throws SQLException {
+        return false;
+    }
+
+    @Override
+    public void updateNString(int i, String s) throws SQLException {
+
+    }
+
+    @Override
+    public void updateNString(String s, String s1) throws SQLException {
+
+    }
+
+    @Override
+    public void updateNClob(int i, NClob nClob) throws SQLException {
+
+    }
+
+    @Override
+    public void updateNClob(String s, NClob nClob) throws SQLException {
+
+    }
+
+    @Override
+    public NClob getNClob(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public NClob getNClob(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public SQLXML getSQLXML(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public SQLXML getSQLXML(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void updateSQLXML(int i, SQLXML sqlxml) throws SQLException {
+
+    }
+
+    @Override
+    public void updateSQLXML(String s, SQLXML sqlxml) throws SQLException {
+
+    }
+
+    @Override
+    public String getNString(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public String getNString(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Reader getNCharacterStream(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Reader getNCharacterStream(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void updateNCharacterStream(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateNCharacterStream(String s, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateAsciiStream(int i, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateBinaryStream(int i, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateCharacterStream(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateAsciiStream(String s, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateBinaryStream(String s, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateCharacterStream(String s, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateBlob(int i, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateBlob(String s, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateClob(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateClob(String s, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateNClob(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateNClob(String s, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void updateNCharacterStream(int i, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void updateNCharacterStream(String s, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void updateAsciiStream(int i, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void updateBinaryStream(int i, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void updateCharacterStream(int i, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void updateAsciiStream(String s, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void updateBinaryStream(String s, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void updateCharacterStream(String s, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void updateBlob(int i, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void updateBlob(String s, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void updateClob(int i, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void updateClob(String s, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void updateNClob(int i, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void updateNClob(String s, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public <T> T getObject(int i, Class<T> aClass) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public <T> T getObject(String s, Class<T> aClass) throws SQLException {
+        return null;
+    }
+
 //#endif JAVA4
     //-------------------- Internal Implementation -------------------------
 // Support for JDBC 2 from JRE 1.1.x
@@ -5072,6 +5311,16 @@ public class jdbcResultSet implements ResultSet {
     boolean isResult() {
         return rResult == null ? false
                                : true;
+    }
+
+    @Override
+    public <T> T unwrap(Class<T> aClass) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean isWrapperFor(Class<?> aClass) throws SQLException {
+        return false;
     }
 
 //#ifdef JAVA6

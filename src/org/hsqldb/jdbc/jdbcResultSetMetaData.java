@@ -1144,6 +1144,16 @@ public class jdbcResultSetMetaData implements ResultSetMetaData {
                                     String.valueOf(column));
         }
     }
+
+    @Override
+    public <T> T unwrap(Class<T> aClass) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean isWrapperFor(Class<?> aClass) throws SQLException {
+        return false;
+    }
 //#ifdef JAVA6
 /*
     public <T> T unwrap(Class<T> iface) throws SQLException

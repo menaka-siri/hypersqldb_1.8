@@ -34,8 +34,7 @@ package org.hsqldb.jdbc;
 import java.io.InputStream;
 import java.io.Reader;
 import java.math.BigDecimal;
-import java.sql.CallableStatement;
-import java.sql.Date;
+import java.sql.*;
 //#ifdef JAVA6
 /*
 import java.sql.NClob;
@@ -43,16 +42,9 @@ import java.sql.RowId;
 import java.sql.SQLXML;
 */
 //#endif JAVA6
-import java.sql.Time;
-import java.sql.Timestamp;
-import java.sql.SQLException;
 import java.util.Calendar;
 
 //#ifdef JAVA2
-import java.sql.Array;
-import java.sql.Blob;
-import java.sql.Clob;
-import java.sql.Ref;
 import java.util.Map;
 
 //#endif JAVA2
@@ -3103,7 +3095,267 @@ implements CallableStatement {
     public java.net.URL getURL(String parameterName) throws SQLException {
         return getURL(findParameterIndex(parameterName));
     }
-    
+
+    @Override
+    public RowId getRowId(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public RowId getRowId(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void setRowId(String s, RowId rowId) throws SQLException {
+
+    }
+
+    @Override
+    public void setNString(String s, String s1) throws SQLException {
+
+    }
+
+    @Override
+    public void setNCharacterStream(String s, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setNClob(String s, NClob nClob) throws SQLException {
+
+    }
+
+    @Override
+    public void setClob(String s, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setBlob(String s, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setNClob(String s, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public NClob getNClob(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public NClob getNClob(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void setSQLXML(String s, SQLXML sqlxml) throws SQLException {
+
+    }
+
+    @Override
+    public SQLXML getSQLXML(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public SQLXML getSQLXML(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public String getNString(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public String getNString(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Reader getNCharacterStream(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Reader getNCharacterStream(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Reader getCharacterStream(int i) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public Reader getCharacterStream(String s) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void setBlob(String s, Blob blob) throws SQLException {
+
+    }
+
+    @Override
+    public void setClob(String s, Clob clob) throws SQLException {
+
+    }
+
+    @Override
+    public void setAsciiStream(String s, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setBinaryStream(String s, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setCharacterStream(String s, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setAsciiStream(String s, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void setBinaryStream(String s, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void setCharacterStream(String s, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void setNCharacterStream(String s, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void setClob(String s, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void setBlob(String s, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void setNClob(String s, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public <T> T getObject(int i, Class<T> aClass) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public <T> T getObject(String s, Class<T> aClass) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public void setRowId(int i, RowId rowId) throws SQLException {
+
+    }
+
+    @Override
+    public void setNString(int i, String s) throws SQLException {
+
+    }
+
+    @Override
+    public void setNCharacterStream(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setNClob(int i, NClob nClob) throws SQLException {
+
+    }
+
+    @Override
+    public void setClob(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setBlob(int i, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setNClob(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setSQLXML(int i, SQLXML sqlxml) throws SQLException {
+
+    }
+
+    @Override
+    public void setAsciiStream(int i, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setBinaryStream(int i, InputStream inputStream, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setCharacterStream(int i, Reader reader, long l) throws SQLException {
+
+    }
+
+    @Override
+    public void setAsciiStream(int i, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void setBinaryStream(int i, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void setCharacterStream(int i, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void setNCharacterStream(int i, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void setClob(int i, Reader reader) throws SQLException {
+
+    }
+
+    @Override
+    public void setBlob(int i, InputStream inputStream) throws SQLException {
+
+    }
+
+    @Override
+    public void setNClob(int i, Reader reader) throws SQLException {
+
+    }
+
 //#endif JAVA4
 //#ifdef JAVA6
 /*

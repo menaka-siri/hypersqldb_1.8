@@ -31,12 +31,9 @@
 
 package org.hsqldb;
 
-import java.sql.Connection;
-import java.sql.Driver;
-import java.sql.DriverManager;
-import java.sql.DriverPropertyInfo;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
+import java.util.logging.Logger;
 
 import org.hsqldb.jdbc.jdbcConnection;
 import org.hsqldb.persist.HsqlDatabaseProperties;
@@ -314,6 +311,11 @@ public class jdbcDriver implements Driver {
 
 /** @todo fredt - we should aim to be able to report true */
         return false;
+    }
+
+    @Override
+    public Logger getParentLogger() throws SQLFeatureNotSupportedException {
+        return null;
     }
 
     static {
